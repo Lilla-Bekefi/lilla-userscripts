@@ -1,0 +1,131 @@
+
+Tampermonkey® by Jan Biniok
+v5.3.3
+	
+wizzgrid
+by Lilla
+
+1
+
+// ==UserScript==
+
+2
+
+// @name         wizzgrid
+
+3
+
+// @namespace    http://tampermonkey.net/
+
+4
+
+// @version      1.0
+
+5
+
+// @description  wizzgrid jira design
+
+6
+
+// @author       Lilla
+
+7
+
+// @match        https://i-contest.atlassian.net/jira/software/projects/MP/*
+
+8
+
+// @grant        none
+
+9
+
+// ==/UserScript==
+
+10
+
+​
+
+11
+
+(function() {
+
+12
+
+    'use strict';
+
+13
+
+​
+
+14
+
+    function changeHeaderBackground() {
+
+15
+
+        setTimeout(() => {
+
+16
+
+            let header = document.queryselector('header.css-1xejwii')
+
+17
+
+            if (header) {
+
+18
+
+            header.style.backgroundColor = "#fcf15b"
+
+19
+
+            }
+
+20
+
+    }, 1000); // Delay to ensure the page has fully loaded
+
+21
+
+        }
+
+22
+
+​
+
+23
+
+    function changeBackground() {
+
+24
+
+        let element = document.querySelector('._kqswh2mm._1e0c1txw._18u0yr36._rh951ule._1hoi1gjq._yugv5oil._83u65oil._1ern5oil._rjkj5oil._19pkv77o._2lx2vrvc._4t3i1wug._1xpp5cnj._1ipy196n._1ly4idpf._135p1ule._15sk1v6z._178k1v6z._18pc1v6z._1bc71v6z._2rkoi2wt._189eyh40._1dqonqa1._1h6d3acm._2hwx196n._ca0qu2gc._u5f314y2');
+
+25
+
+        if (element) {
+
+26
+
+            element.style.backgroundColor = "#fffd83";
+
+27
+
+        }
+
+28
+
+    }
+
+29
+
+​
+
+30
+
+    function replaceProjectAvatar() {
+
+31
+
+    setTimeout(() => {
+
